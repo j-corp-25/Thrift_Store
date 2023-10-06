@@ -1,0 +1,32 @@
+.section-title {
+  text-align: center;
+  margin-top: 3em;
+  font-weight: bolder;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-first {
+  display: flex;
+}
+.text-block-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.first-title {
+    margin-bottom: 2em;
+}
+.first-summary {
+    max-width: 75%;
+}
+
+
+.image-container {
+  max-width: 50%;
+  padding: 5%;
+}

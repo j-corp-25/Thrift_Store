@@ -1,8 +1,30 @@
 import React from 'react'
+import "./MainContent.css"
+import first_landingImage from '../assets/Landing_Image.jpg';
 
 const MainContent = () => {
   return (
-    <div>MainContent</div>
+    <section className='section main-section'>
+        <div className='section section-title'>About Elizabeths Shop</div>
+        <div className='section section-first'>
+            <div className='text-block-container'>
+
+            <h2 className='first-title'> Our Vision</h2>
+            <p className='first-summary'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt obcaecati impedit nisi esse minima? Distinctio itaque ut possimus quia sed minima quod adipisci, quos blanditiis repellat, accusantium, expedita tempora animi?</p>
+            </div>
+            <div className='image-container'>
+            <figure>
+                <img src={first_landingImage}></img>
+            </figure>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
   )
 }
 
