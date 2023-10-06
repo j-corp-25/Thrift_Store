@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-.section-first {
+.section-first,.section-second,.section-third {
   display: flex;
 }
 .text-block-container {
@@ -29,4 +29,13 @@
 .image-container {
   max-width: 50%;
   padding: 5%;
+}
+
+.section-second {
+    flex-direction: row-reverse;
+}
+
+
+.main-sub-section .section {
+    margin-bottom: -100px;
 }
