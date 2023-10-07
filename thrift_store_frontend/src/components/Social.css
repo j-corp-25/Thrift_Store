@@ -15,5 +15,13 @@
 }
 
 section.section.social-section {
+    margin-top: 3em;
+}
+
+.section-title-social {
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 3em;
     margin-top: 10em;
+
 }

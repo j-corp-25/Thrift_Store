@@ -1,0 +1,16 @@
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    margin: 0 3em 0 3em;
+}
+.section-title-contact {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-weight: bolder;
+}
+
+.contact-left, .contact-right {
+    width: 45%; 
+}

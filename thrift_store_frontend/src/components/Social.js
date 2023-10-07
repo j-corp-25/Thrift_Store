@@ -1,10 +1,10 @@
 import React from "react";
-import './Social.css'; 
+import './Social.css';
 
 const Social = () => {
     return (
         <section className='section social-section'>
-            <div className="section section-title">Follow us on Our Socials</div>
+            <div className="section section-title-social">Follow us on Our Socials</div>
             <div className="social-icons">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <i className="fa fa-facebook-square" aria-hidden="true"></i>
