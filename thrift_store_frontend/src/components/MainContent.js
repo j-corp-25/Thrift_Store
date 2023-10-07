@@ -3,6 +3,7 @@ import "./MainContent.css";
 import first_landingImage from "../assets/Landing_Image.jpg";
 import location_image from "../assets/location.jpg";
 import social_media from "../assets/social_media.jpg";
+import Social from "./Social";
 
 
 const MainContent = () => {
@@ -62,7 +63,9 @@ const MainContent = () => {
           </div>
         </div>
       </div>
+      <Social/>
     </section>
+
   );
 };
 
