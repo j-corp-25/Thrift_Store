@@ -3,9 +3,9 @@ import './styles/reset.css';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
-// import MainPage from './components/MainPage';
 import Social from './components/Social';
-// import DataTestComponent from './components/DataTestComponent';
+import Contact from './components/Contact';
+
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
     <Header/>
     <MainContent/>
     <Social/>
+    <Contact/>
     <Footer/>
     </div>
   );
