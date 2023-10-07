@@ -1,19 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const [emailSent,setEmailSent] = useState(false)
+  const SERVICE_ID = 'default_service';
+  const TEMPLATE_ID = 'template_c62k8ib';
+  const USER_ID = process.env.REACT_APP_EMAILJS_KEY
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+    .then((result) => {
+        console.log(result.text);
+        e.target.reset()
+        setEmailSent(true);
+
+    }, (error) => {
+        console.log(error.text);
+    });
+
+  }
   return (
     <>
       <div className="section section-title-contact">Contact Us</div>
       <section className="contact-section">
         <div className="contact-left">
           <h2>Get in touch!</h2>
-          <form className="contact-form">
-            <input type="text" placeholder="name" />
-            <input type="email" placeholder="Email*" />
-            <textarea type="text" placeholder="message" />
+          <form onSubmit={sendEmail} className="contact-form">
+            <input type="text" name="from_name" placeholder="name" />
+            <input type="email" name="reply_to" placeholder="Email*" />
+            <textarea type="text" name="message" placeholder="message" />
             <button type="submit">Send</button>
           </form>
+          {emailSent && <p className="success-msg">Your message has been sent successfully!</p>}
         </div>
 
         <div className="contact-right">
