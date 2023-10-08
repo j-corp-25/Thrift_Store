@@ -1,28 +1,35 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const [emailSent,setEmailSent] = useState(false)
-  const SERVICE_ID = 'default_service';
-  const TEMPLATE_ID = 'template_c62k8ib';
-  const USER_ID = process.env.REACT_APP_EMAILJS_KEY
 
+  const [name,setName] = useState("")
+  const [email,setEmail] = useState("")
+  const [message,setMessage] = useState("")
+
+  const [messageError,serNameError] = useState
+  const [emailError,setEmailError] = useState("")
+  const [nameError,setNameError] = useState("")
+
+  const SERVICE_ID = "default_service";
+  const TEMPLATE_ID = "template_c62k8ib";
+  const USER_ID = process.env.REACT_APP_EMAILJS_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
+    let errors = false;
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-    .then((result) => {
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+      (result) => {
         console.log(result.text);
-        e.target.reset()
-        setEmailSent(true);
-
-    }, (error) => {
+        e.target.reset();
+      },
+      (error) => {
         console.log(error.text);
-    });
-
-  }
+      }
+    );
+  };
   return (
     <>
       <div className="section section-title-contact">Contact Us</div>
@@ -35,7 +42,6 @@ const Contact = () => {
             <textarea type="text" name="message" placeholder="message" />
             <button type="submit">Send</button>
           </form>
-          {emailSent && <p className="success-msg">Your message has been sent successfully!</p>}
         </div>
 
         <div className="contact-right">
