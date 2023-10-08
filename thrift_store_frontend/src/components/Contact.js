@@ -3,14 +3,42 @@ import "./Contact.css";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  //form states
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [name,setName] = useState("")
-  const [email,setEmail] = useState("")
-  const [message,setMessage] = useState("")
+  //form error states
+  const [emailError, setEmailError] = useState(false);
+  const [nameError, setNameError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
 
-  const [messageError,serNameError] = useState
-  const [emailError,setEmailError] = useState("")
-  const [nameError,setNameError] = useState("")
+  const update = (field) => {
+    let setState;
+    let setErrorState;
+
+    switch (field) {
+      case "email":
+        setState = setEmail;
+        setErrorState = setEmailError;
+        break;
+      case "name":
+        setState = setName;
+        setErrorState = setNameError;
+        break;
+      case "message":
+        setState = setMessage;
+        setErrorState = setMessageError;
+        break;
+      default:
+        throw Error("Unknown field in Email Form");
+    }
+
+    return (e) => {
+      setErrorState(null);
+      setState(e.currentTarget.value);
+    };
+  };
 
   const SERVICE_ID = "default_service";
   const TEMPLATE_ID = "template_c62k8ib";
@@ -18,17 +46,49 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
     let errors = false;
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
-      (result) => {
-        console.log(result.text);
-        e.target.reset();
-      },
-      (error) => {
-        console.log(error.text);
+    if (!name) {
+      setNameError("Name cannot be blank");
+      errors = true;
+    } else {
+      setNameError(null);
+    }
+
+    if (!email) {
+      setEmailError("Email is required");
+      errors = true;
+    } else {
+      let emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!emailRegEx.test(email) && !email.includes(".")) {
+        setEmailError("Email format is incorrect");
+        errors = true;
+      } else {
+        setEmailError(null);
       }
-    );
+    }
+
+    if (!message) {
+      setMessageError("Message cannot be empty");
+    } else if (message.length < 10) {
+      setMessageError("Message is too short");
+      errors = true;
+    } else {
+      setMessageError(null);
+    }
+
+    if (!errors) {
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    }
   };
   return (
     <>
@@ -37,9 +97,12 @@ const Contact = () => {
         <div className="contact-left">
           <h2>Get in touch!</h2>
           <form onSubmit={sendEmail} className="contact-form">
-            <input type="text" name="from_name" placeholder="name" />
-            <input type="email" name="reply_to" placeholder="Email*" />
-            <textarea type="text" name="message" placeholder="message" />
+            {nameError && <div className="error">{nameError}</div>}
+            <input type="text" name="from_name" value={name} onChange={update("name")} placeholder="Name" />
+            {emailError && <div className="error">{emailError}</div>}
+            <input type="text" name="reply_to" value={email} onChange={ update ("email")} placeholder="Email" />
+            {messageError && <div className="error">{messageError}</div>}
+            <textarea type="text" name="message" value={message} onChange={update ("message")} placeholder="Message" />
             <button type="submit">Send</button>
           </form>
         </div>
