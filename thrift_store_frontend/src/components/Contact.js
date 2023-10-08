@@ -118,7 +118,7 @@ const Contact = () => {
             Message us on WhatsApp
           </button>
           <h3>Elizabeth Store</h3>
-          <p>76-16 Jamaica Avenue</p>
+          <p>76-16 Jamaica Ave, Queens, NY 11421</p>
           <div className="hours-dropdown">
             <h3>Hours</h3>
             <select>

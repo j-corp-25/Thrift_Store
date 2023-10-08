@@ -5,6 +5,7 @@ import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 import Social from './components/Social';
 import Contact from './components/Contact';
+import StoreMap from './components/StoreMap';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Header/>
     <MainContent/>
     <Contact/>
+    <StoreMap/>
     <Footer/>
     </div>
   );
