@@ -1,17 +1,19 @@
 import React from 'react'
 import "./Header.css"
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <div className='header-container'>
         <div className='header-navigation'>
-        <a href="/home">Home</a>
-        <a href="/faq">FAQ</a>
+        <a href="/home">{t('home')}</a>
+        <a href="/faq">{t('faq')}</a>
         </div>
 
-        <div className='header-title'>Elizabeth's Shop</div>
-        <div className='header-message'>Discover Hidden Treasures</div>
-        <div className='header-submessage'>Find unique and budget-friendly items at Elizabeths Shop</div>
+        <div className='header-title'>{t('shopTitle')}</div>
+        <div className='header-message'>{t('headerMessage')}</div>
+        <div className='header-submessage'>{t('headerSubMessage')}</div>
 
 
     </div>
