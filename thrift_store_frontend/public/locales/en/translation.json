@@ -1,7 +1,16 @@
 {
-    "home": "Home",
-    "faq": "FAQ",
-    "shopTitle": "Elizabeth Thrift Shop",
-    "headerMessage": "Discover Hidden Treasures",
-    "headerSubMessage": "Find unique and budget-friendly items at Elizabeths Shop"
+  "home": "Home",
+  "faq": "FAQ",
+  "shopTitle": "Elizabeth Thrift Shop",
+  "headerMessage": "Discover Hidden Treasures",
+  "headerSubMessage": "Find unique and budget-friendly items at Elizabeths Shop",
+  "mainContent": {
+      "aboutTitle": "About Elizabeth Thrift Shop",
+      "visionTitle": "Our Vision",
+      "visionDescription": "At Elizabeth's Thrift Store, we envision being the first choice for quality secondhand finds. Our curated selections reflect not just affordability but also our deep commitment to sustainability and community bonding.",
+      "locationTitle": "Our Location",
+      "locationDescription": "Nestled in the vibrant heart of WoodHaven, Elizabeth's Thrift Store is both a treasure trove and a testament to the community's diverse spirit. Easily accessible by public transport, our doors open to a world of sustainable shopping experiences.",
+      "socialMediaTitle": "Our Social Media",
+      "socialMediaDescription": "Stay connected with us on social media for the latest on our unique collections, exclusive sales, and events. Beyond shopping, we also share insights into thrifting and sustainable living, celebrating our community's shared values."
   }
+}

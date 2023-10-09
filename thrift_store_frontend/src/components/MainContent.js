@@ -4,21 +4,20 @@ import first_landingImage from "../assets/Boots_And_SHOES.webp";
 import location_image from "../assets/Male_Flannels.webp";
 import social_media from "../assets/Shoes_on_Shelf.webp";
 import Social from "./Social";
+import { useTranslation } from "react-i18next";
 
 const MainContent = () => {
+  const { t, i18n } = useTranslation();
   return (
     <section className="section main-section">
-      <div className="section section-title">About Elizabeth Thrift Shop</div>
+      <div className="section section-title">{t('mainContent.aboutTitle')}</div>
 
       <div className="main-sub-section">
         <div className="section section-first">
           <div className="text-block-container">
-            <h2 className="first-title"> Our Vision</h2>
+            <h2 className="first-title">{t('mainContent.visionTitle')}</h2>
             <p className="first-summary">
-              At Elizabeth's Thrift Store, we envision being the first choice
-              for quality secondhand finds. Our curated selections reflect not
-              just affordability but also our deep commitment to sustainability
-              and community bonding.
+              {t('mainContent.visionDescription')}
             </p>
           </div>
           <div className="image-container">
@@ -29,12 +28,9 @@ const MainContent = () => {
         </div>
         <div className="section section-second">
           <div className="text-block-container">
-            <h2 className="first-title"> Our Location</h2>
+            <h2 className="first-title">{t('mainContent.locationTitle')}</h2>
             <p className="first-summary">
-              Nestled in the vibrant heart of WoodHaven, Elizabeth's Thrift
-              Store is both a treasure trove and a testament to the community's
-              diverse spirit. Easily accessible by public transport, our doors
-              open to a world of sustainable shopping experiences.
+              {t('mainContent.locationDescription')}
             </p>
           </div>
           <div className="image-container">
@@ -46,12 +42,9 @@ const MainContent = () => {
 
         <div className="section section-third">
           <div className="text-block-container">
-            <h2 className="first-title"> Our Social Media</h2>
+            <h2 className="first-title">{t('mainContent.socialMediaTitle')}</h2>
             <p className="first-summary">
-              Stay connected with us on social media for the latest on our
-              unique collections, exclusive sales, and events. Beyond shopping,
-              we also share insights into thrifting and sustainable living,
-              celebrating our community's shared values.
+              {t('mainContent.socialMediaDescription')}
             </p>
           </div>
           <div className="image-container">
