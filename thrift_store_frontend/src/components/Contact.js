@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
+import '../i18n';
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
   //email sent states
   const [emailSent, setEmailSent] = useState(false);
   const [emailErrorSending, setEmailErrorSending] = useState(false);
@@ -112,10 +115,10 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="section section-title">Contact Us</div>
+ <div className="section section-title">{t('mainContent.contact.title')}</div>
       <section className="contact-section">
         <div className="contact-left">
-          <h2>Email us!</h2>
+          <h2>{t('mainContent.contact.emailUs')}</h2>
           <form onSubmit={sendEmail} className="contact-form">
             {nameError && <div className="error">{nameError}</div>}
             <input
@@ -123,7 +126,7 @@ const Contact = () => {
               name="from_name"
               value={name}
               onChange={update("name")}
-              placeholder="Name"
+              placeholder={t('mainContent.contact.namePlaceholder')}
             />
             {emailError && <div className="error">{emailError}</div>}
             <input
@@ -131,7 +134,7 @@ const Contact = () => {
               name="reply_to"
               value={email}
               onChange={update("email")}
-              placeholder="Email"
+              placeholder={t('mainContent.contact.emailPlaceholder')}
             />
             {messageError && <div className="error">{messageError}</div>}
             <textarea
@@ -139,9 +142,9 @@ const Contact = () => {
               name="message"
               value={message}
               onChange={update("message")}
-              placeholder="Message"
+              placeholder={t('mainContent.contact.messagePlaceholder')}
             />
-            <button type="submit">Send</button>
+            <button type="submit">{t('mainContent.contact.sendButton')}</button>
             {emailSent && (
               <div className="success">Email sent successfully!</div>
             )}
@@ -154,11 +157,8 @@ const Contact = () => {
         </div>
 
         <div className="contact-right">
-          <h2>Send us a Message!</h2>
-          <p>
-            Looking for something special? Have a question? Let us know, and
-            we'll get back to you soon!
-          </p>
+        <h2>{t('mainContent.contact.sendMessageTitle')}</h2>
+          <p>{t('mainContent.contact.sendMessageDescription')}</p>
           <a
             href="https://wa.me/13478983238?text=Hello%2C%20I%20have%20a%20question%20about%20Elizabeth%20Store"
             target="_blank"
@@ -166,7 +166,7 @@ const Contact = () => {
           >
             <button className="whatsapp-btn">
               <i className="fa fa-whatsapp" aria-hidden="true"></i>
-              Message us on WhatsApp
+              {t('mainContent.contact.whatsappButton')}
             </button>
           </a>
           <h3>Elizabeth Store</h3>

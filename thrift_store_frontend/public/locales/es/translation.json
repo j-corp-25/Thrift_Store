@@ -1,16 +1,27 @@
 {
-    "home": "Inicio",
-    "faq": "Preguntas Frecuentes",
-    "headerMessage": "Descubre Tesoros Escondidos",
-    "headerSubMessage": "Encuentra artículos únicos y económicos en la tienda de Elizabeth",
-    "mainContent": {
-      "aboutTitle": "Sobre la Tienda de Elizabeth",
-      "visionTitle": "Nuestra Visión",
-      "visionDescription": "En la Tienda de Elizabeth, aspiramos a ser la primera opción para consequit ropa de segunda mano de calidad",
-      "locationTitle": "Nuestra Ubicación",
-      "locationDescription": "Ubicada en el vibrante corazón de WoodHaven, la Tienda de Elizabeth es tanto un tesoro escondido como un testimonio del espíritu diverso de la comunidad. Fácilmente accesible por transporte público, nuestras puertas se abren a un mundo de experiencias de compra sostenibles.",
-      "socialMediaTitle": "Nuestras Redes Sociales",
-      "socialMediaDescription": "Mantente conectado con nosotros en las redes sociales para lo último en nuestras colecciones únicas, ventas exclusivas y eventos. Más allá de las compras, también compartimos ideas sobre la compra de segunda mano y la vida sostenible, celebrando los valores compartidos de nuestra comunidad."
-  }
+  "home": "Inicio",
+  "faq": "Preguntas Frecuentes",
+  "headerMessage": "Descubre Tesoros Escondidos",
+  "headerSubMessage": "Encuentra artículos únicos y económicos en la tienda de Elizabeth",
+  "mainContent": {
+    "aboutTitle": "Sobre la Tienda de Elizabeth",
+    "visionTitle": "Nuestra Visión",
+    "visionDescription": "En la Tienda de Elizabeth, aspiramos a ser la primera opción para consequit ropa de segunda mano de calidad",
+    "locationTitle": "Nuestra Ubicación",
+    "locationDescription": "Ubicada en el vibrante corazón de WoodHaven, la Tienda de Elizabeth es tanto un tesoro escondido como un testimonio del espíritu diverso de la comunidad. Fácilmente accesible por transporte público, nuestras puertas se abren a un mundo de experiencias de compra sostenibles.",
+    "socialMediaTitle": "Nuestras Redes Sociales",
+    "socialMediaDescription": "Mantente conectado con nosotros en las redes sociales para lo último en nuestras colecciones únicas, ventas exclusivas y eventos. Más allá de las compras, también compartimos ideas sobre la compra de segunda mano y la vida sostenible, celebrando los valores compartidos de nuestra comunidad.",
+    "contact": {
+      "title": "Contáctanos",
+      "emailUs": "¡Envíanos un correo!",
+      "namePlaceholder": "Nombre",
+      "emailPlaceholder": "Correo electrónico",
+      "messagePlaceholder": "Mensaje",
+      "sendButton": "Enviar",
+      "sendMessageTitle": "¡Envíanos un mensaje!",
+      "sendMessageDescription": "¿Buscas algo especial? ¿Tienes alguna pregunta? ¡Háznoslo saber y te responderemos pronto!",
+      "whatsappButton": "Mensajéanos por WhatsApp"
+    }
 
   }
+}
