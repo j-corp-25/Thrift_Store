@@ -3,6 +3,10 @@ import "./Contact.css";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  //email sent states
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailErrorSending, setEmailErrorSending] = useState(false);
+  
   //form states
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -83,9 +87,13 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          setEmailSent(true);
+          setTimeout(() => setEmailSent(false), 3000); // Reset after 3 seconds
         },
         (error) => {
           console.log(error.text);
+          setEmailErrorSending(true);
+          setTimeout(() => setEmailErrorSending(false), 3000); // Reset after 3 seconds
         }
       );
     }
@@ -98,11 +106,29 @@ const Contact = () => {
           <h2>Get in touch!</h2>
           <form onSubmit={sendEmail} className="contact-form">
             {nameError && <div className="error">{nameError}</div>}
-            <input type="text" name="from_name" value={name} onChange={update("name")} placeholder="Name" />
+            <input
+              type="text"
+              name="from_name"
+              value={name}
+              onChange={update("name")}
+              placeholder="Name"
+            />
             {emailError && <div className="error">{emailError}</div>}
-            <input type="text" name="reply_to" value={email} onChange={ update ("email")} placeholder="Email" />
+            <input
+              type="text"
+              name="reply_to"
+              value={email}
+              onChange={update("email")}
+              placeholder="Email"
+            />
             {messageError && <div className="error">{messageError}</div>}
-            <textarea type="text" name="message" value={message} onChange={update ("message")} placeholder="Message" />
+            <textarea
+              type="text"
+              name="message"
+              value={message}
+              onChange={update("message")}
+              placeholder="Message"
+            />
             <button type="submit">Send</button>
           </form>
         </div>

@@ -29,7 +29,7 @@ const Header = () => {
 
       </div>
         <div className="nav-links">
-          <a href="/home">{t("home")}</a>
+          {/* <a href="/home">{t("home")}</a> */}
           {/* <a href="/faq">{t("faq")}</a> */}
         </div>
 

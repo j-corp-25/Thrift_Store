@@ -55,12 +55,11 @@
 
 }
 
-/* Add some spacing between the icon and the text */
 .whatsapp-btn i {
     margin-right: 10px;
 }
 
-/* Remove focus outline for cleaner appearance; but be careful with accessibility concerns */
+
 .whatsapp-btn:focus {
     outline: none;
 }
