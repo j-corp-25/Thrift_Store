@@ -1,7 +1,12 @@
 .section-title {
   text-align: center;
-  margin-top: 3em;
   font-weight: bolder;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 35px;
 }
 .main-section {
   display: flex;
@@ -31,9 +36,6 @@
   max-width: 50%;
   max-height: 50%;
   padding: 6%;
-
-  width: 70em;
-  height: 30em;
   margin-bottom: 1em;
 }
 
@@ -48,4 +50,76 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400 ;
     line-height: 1.6;
+}
+
+.main-sub-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-first, .section-second, .section-third {
+  display: contents;
+}
+
+.image-container {
+  max-width: 100%; 
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 70%;
+  height: auto;
+  padding: 5%;
+}
+
+.text-block-container {
+  max-width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.section-first .text-block-container {
+    order: 2;
+}
+.section-first .image-container {
+    order: 1;
+}
+
+
+.section-second .text-block-container {
+    order: 2;
+}
+.section-second .image-container {
+    order: 2;
+}
+
+
+.section-third .text-block-container {
+    order: 3;
+}
+.section-third .image-container {
+    order: 2;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: bolder;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-subcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -17,6 +17,9 @@ const Contact = () => {
   const [nameError, setNameError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
+  // hours state
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
   const update = (field) => {
     let setState;
     let setErrorState;
@@ -78,7 +81,7 @@ const Contact = () => {
 
     if (!message) {
       setMessageError("Message cannot be empty");
-      errors = true
+      errors = true;
       setTimeout(() => setMessageError(false), 1500);
     } else if (message.length < 10) {
       setMessageError("Message is too short");
@@ -92,7 +95,6 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
 
-      
           setName("");
           setEmail("");
           setMessage("");
@@ -110,10 +112,10 @@ const Contact = () => {
   };
   return (
     <>
-      <div className="section section-title-contact">Contact Us</div>
+      <div className="section section-title">Contact Us</div>
       <section className="contact-section">
         <div className="contact-left">
-          <h2>Get in touch!</h2>
+          <h2>Email us!</h2>
           <form onSubmit={sendEmail} className="contact-form">
             {nameError && <div className="error">{nameError}</div>}
             <input
@@ -152,28 +154,45 @@ const Contact = () => {
         </div>
 
         <div className="contact-right">
-          <h2> Get in touch!</h2>
+          <h2>Send us a Message!</h2>
           <p>
-            Loooking for something special? Have a question? Let us know, and
+            Looking for something special? Have a question? Let us know, and
             we'll get back to you soon!
           </p>
-          <button className="whatsapp-btn">
-            <i className="fa fa-whatsapp" aria-hidden="true"></i>
-            Message us on WhatsApp
-          </button>
+          <a
+            href="https://wa.me/13478983238?text=Hello%2C%20I%20have%20a%20question%20about%20Elizabeth%20Store"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="whatsapp-btn">
+              <i className="fa fa-whatsapp" aria-hidden="true"></i>
+              Message us on WhatsApp
+            </button>
+          </a>
           <h3>Elizabeth Store</h3>
           <p>76-16 Jamaica Ave, Queens, NY 11421</p>
           <div className="hours-dropdown">
             <h3>Hours</h3>
-            <select>
-              <option value="mon">Mon 09:00 am - 05:00 pm</option>
-              <option value="tue">Tue 09:00 am - 05:00 pm</option>
-              <option value="wed">Wed 09:00 am - 05:00 pm</option>
-              <option value="thu">Thu 09:00 am - 05:00 pm</option>
-              <option value="fri">Fri 09:00 am - 05:00 pm</option>
-              <option value="sat">Sat Closed</option>
-              <option value="sun">Sun Closed</option>
-            </select>
+            <div className="dropdown">
+              <div
+                className="dropdown-selected"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                Open today 09:00 am - 05:00 pm
+                <span className="arrow">{isOpen ? "▲" : "▼"}</span>
+              </div>
+              {isOpen && (
+                <div className="dropdown-options">
+                  <div>Mon 10:00 am - 09:00 pm</div>
+                  <div>Tue 10:00 am - 05:00 pm</div>
+                  <div>Wed 10:00 am - 09:00 pm</div>
+                  <div>Thu 10:00 am - 09:00 pm</div>
+                  <div>Fri 10:00 am - 09:00 pm</div>
+                  <div>Sat 10:00 am - 09:00 pm</div>
+                  <div>Sun 10:00 am - 09:00 pm</div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>

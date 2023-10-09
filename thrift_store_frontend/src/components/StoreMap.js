@@ -21,7 +21,7 @@ const StoreMap = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <button>Get directions</button>
+        <button className="map-button">Get directions</button>
       </a>
 
       <MapContainer

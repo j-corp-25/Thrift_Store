@@ -3,7 +3,7 @@ import './Social.css';
 
 const Social = () => {
     return (
-        <section className='section social-section'>
+        <section className='section section-title'>
             <div className="section section-title-social">Follow us on Our Socials</div>
             <div className="social-icons">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">

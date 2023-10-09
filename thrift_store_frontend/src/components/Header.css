@@ -82,7 +82,7 @@
 }
 
 .header-navigation > .active-language {
-    background-color: hsla(0, 0%, 100%, 0.2);
+    background-color: hsl(0deg 0% 100% / 70%);
 }
 
 .header-navigation > a {

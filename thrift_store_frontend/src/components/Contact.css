@@ -1,69 +1,128 @@
+
+
+
 .contact-section {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
-    margin: 0 3em 0 3em;
+    padding: 20px 0;
+    margin: 0 5em 0 5em;
+    max-height: 100%;
 }
-.section-title-contact {
-    text-align: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    font-weight: bolder;
-}
+
 
 .contact-left, .contact-right {
     width: 45%;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    height: 725px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    height: -webkit-fill-available;
+    justify-content: space-evenly;
 }
+
 .contact-form > input, textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
 .contact-form > button {
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     background-color: black;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-form > button:hover {
+    background-color: #555;
 }
 
 .whatsapp-btn {
     display: flex;
     align-items: center;
-    background-color: gray;
+    background-color: #25D366;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 25px;
     font-size: 20px;
     font-weight: bolder;
     border: none;
     cursor: pointer;
+    margin-top: 20px;
 }
+
 .fa-whatsapp {
-    background: green;
-    font-size: 30px;
-    border-radius: 15px;
-    width: 35px;
-    height: 32px;
-
-
-}
-
-.whatsapp-btn i {
-    margin-right: 10px;
-}
-
-
-.whatsapp-btn:focus {
-    outline: none;
+    font-size: 24px;
+    margin-right: 15px;
 }
 
 .error {
     color: red;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    margin-top: 20px;
+}
+
+.contact-right h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.contact-right p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.contact-right h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    background-color: none;
+}
+
+.dropdown-selected {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-selected {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-options div {
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-options div:hover {
+    background-color: #f0f0f0;
+}
+
+.arrow {
+    margin-left: 10px;
 }

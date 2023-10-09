@@ -1,27 +1,22 @@
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 .social-icons a {
-    color: #000;
-    font-size: 100px;
-    transition: color 0.3s;
+  color: #000;
+  font-size: 100px;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #0077b5;
+  color: #0077b5;
 }
 
-section.section.social-section {
-    margin-top: 3em;
-}
-
-.section-title-social {
-    text-align: center;
-    font-weight: bolder;
-    margin-bottom: 3em;
-    margin-top: 10em;
-
+.social-icons {
+    display: flex;
+    /* gap: 100px; */
+    width: 100%;
+    justify-content: space-evenly;
 }

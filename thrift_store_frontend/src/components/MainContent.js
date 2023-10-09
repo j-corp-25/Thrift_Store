@@ -22,7 +22,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <figure>
+          <figure className="image-subcontainer">
               <img src={first_landingImage} loading="lazy"></img>
             </figure>
           </div>
@@ -38,7 +38,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <figure>
+            <figure className="image-subcontainer">
               <img src={location_image} loading="lazy"></img>
             </figure>
           </div>
@@ -55,7 +55,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <figure>
+          <figure className="image-subcontainer">
               <img src={social_media} loading="lazy"></img>
             </figure>
           </div>
