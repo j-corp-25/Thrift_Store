@@ -126,3 +126,28 @@
 .arrow {
     margin-left: 10px;
 }
+
+@media (max-width: 900px) {
+    .contact-left,.contact-right {
+        width: 95%;
+        height: 95%;
+    }
+
+
+  }
+
+  @media (max-width:  500px) {
+    .contact-section{
+        gap: 5vh;
+    }
+    .contact-left,.contact-right {
+        width: 90%;
+        padding: 5%;
+    }
+    .contact-section {
+        margin: 0 2em 0 2em;
+    }
+
+
+
+  }

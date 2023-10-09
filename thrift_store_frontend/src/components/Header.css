@@ -91,10 +91,6 @@
   text-decoration: none;
   margin-right: 20px;
 }
-.header-navigation > a:hover {
-  color: gray;
-  cursor: pointer;
-}
 
 .header-navigation > a:visited {
   color: hsla(0, 0%, 100%, 0.888);
@@ -127,6 +123,9 @@
 
 .nav-links > a:hover {
   color: gray;
+}
+.active-language {
+    color: red;
 }
 
 /*mobile friendly  */

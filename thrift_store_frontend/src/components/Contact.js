@@ -178,13 +178,13 @@ const Contact = () => {
                 className="dropdown-selected"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                Open today 09:00 am - 05:00 pm
+                Open today 10:00 am - 09:00 pm
                 <span className="arrow">{isOpen ? "▲" : "▼"}</span>
               </div>
               {isOpen && (
                 <div className="dropdown-options">
                   <div>Mon 10:00 am - 09:00 pm</div>
-                  <div>Tue 10:00 am - 05:00 pm</div>
+                  <div>Tue 10:00 am - 09:00 pm</div>
                   <div>Wed 10:00 am - 09:00 pm</div>
                   <div>Thu 10:00 am - 09:00 pm</div>
                   <div>Fri 10:00 am - 09:00 pm</div>

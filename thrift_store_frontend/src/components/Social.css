@@ -20,3 +20,11 @@
     width: 100%;
     justify-content: space-evenly;
 }
+
+@media (max-width: 900px) {
+    .social-icons {
+        gap: 0px;
+    }
+
+
+  }

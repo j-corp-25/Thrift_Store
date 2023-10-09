@@ -157,7 +157,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
- 
+
     gap: 20vh;
   }
+  .image-container img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-container img {
+    width: 90%;
+
+  }
+
 }
