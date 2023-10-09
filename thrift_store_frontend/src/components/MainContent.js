@@ -1,14 +1,14 @@
 import React from "react";
 import "./MainContent.css";
-import first_landingImage from "../assets/Landing_Image.jpg";
-import location_image from "../assets/location.jpg";
-import social_media from "../assets/social_media.jpg";
+import first_landingImage from "../assets/Boots_And_SHOES.webp";
+import location_image from "../assets/Male_Flannels.webp";
+import social_media from "../assets/Shoes_on_Shelf.webp";
 import Social from "./Social";
 
 const MainContent = () => {
   return (
     <section className="section main-section">
-      <div className="section section-title">About Elizabeths Shop</div>
+      <div className="section section-title">About Elizabeth Thrift Shop</div>
 
       <div className="main-sub-section">
         <div className="section section-first">
