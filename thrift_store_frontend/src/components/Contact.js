@@ -6,7 +6,7 @@ const Contact = () => {
   //email sent states
   const [emailSent, setEmailSent] = useState(false);
   const [emailErrorSending, setEmailErrorSending] = useState(false);
-  
+
   //form states
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -56,6 +56,7 @@ const Contact = () => {
     if (!name) {
       setNameError("Name cannot be blank");
       errors = true;
+      setTimeout(() => setNameError(false), 1500);
     } else {
       setNameError(null);
     }
@@ -63,11 +64,13 @@ const Contact = () => {
     if (!email) {
       setEmailError("Email is required");
       errors = true;
+      setTimeout(() => setEmailError(false), 1500);
     } else {
       let emailRegEx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
       if (!emailRegEx.test(email) && !email.includes(".")) {
         setEmailError("Email format is incorrect");
         errors = true;
+        setTimeout(() => setEmailError(false), 1500);
       } else {
         setEmailError(null);
       }
@@ -75,25 +78,32 @@ const Contact = () => {
 
     if (!message) {
       setMessageError("Message cannot be empty");
+      errors = true
+      setTimeout(() => setMessageError(false), 1500);
     } else if (message.length < 10) {
       setMessageError("Message is too short");
       errors = true;
+      setTimeout(() => setMessageError(false), 1500);
     } else {
       setMessageError(null);
     }
-
     if (!errors) {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
         (result) => {
           console.log(result.text);
-          e.target.reset();
+
+      
+          setName("");
+          setEmail("");
+          setMessage("");
+
           setEmailSent(true);
-          setTimeout(() => setEmailSent(false), 3000); // Reset after 3 seconds
+          setTimeout(() => setEmailSent(false), 1500);
         },
         (error) => {
           console.log(error.text);
           setEmailErrorSending(true);
-          setTimeout(() => setEmailErrorSending(false), 3000); // Reset after 3 seconds
+          setTimeout(() => setEmailErrorSending(false), 1500);
         }
       );
     }
@@ -130,6 +140,14 @@ const Contact = () => {
               placeholder="Message"
             />
             <button type="submit">Send</button>
+            {emailSent && (
+              <div className="success">Email sent successfully!</div>
+            )}
+            {emailErrorSending && (
+              <div className="error">
+                There was an error sending the email. Please try again later.
+              </div>
+            )}
           </form>
         </div>
 
