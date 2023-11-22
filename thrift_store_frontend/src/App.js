@@ -15,7 +15,7 @@ function App() {
     <MainContent/>
     <Contact/>
     <StoreMap/>
-    <Footer/>
+    // <Footer/>
     </div>
   );
 }
